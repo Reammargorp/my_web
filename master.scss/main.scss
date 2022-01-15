@@ -1491,10 +1491,6 @@ $special: ".special";
         .review-boxTwo {
           max-width: 100%;
           position: absolute;
-
-          @include breakpoints(mobile) {
-            height: 48vh;
-          }
           &:hover img {
             border-color: $color-alt;
           }
