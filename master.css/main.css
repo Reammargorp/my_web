@@ -1286,7 +1286,7 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .skill .overlay {
-    height: 70vh;
+    height: 100vh;
   }
 }
 .skill img {
@@ -1300,7 +1300,7 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .skill img {
-    height: 70vh;
+    height: 100vh;
   }
 }
 .skill .container {
@@ -1953,11 +1953,6 @@ input[type=range]::-moz-slider-thumb {
   -webkit-transition: all 300ms linear 0ms;
   transition: all 300ms linear 0ms;
   direction: rtl;
-}
-@media (max-width: 767px) {
-  .review .container .main-box .review-box-two .review-boxTwo {
-    height: 48vh;
-  }
 }
 .review .container .main-box .review-box-two .review-boxTwo:hover img {
   border-color: #bd1b6e;

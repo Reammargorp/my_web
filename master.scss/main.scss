@@ -1000,7 +1000,7 @@ $special: ".special";
     height: 100vh;
     z-index: -1;
     @include breakpoints(mobile) {
-      height: 70vh;
+      height: 100vh;
     }
   }
   img {
@@ -1011,7 +1011,7 @@ $special: ".special";
     top: 0;
     z-index: -1;
     @include breakpoints(mobile) {
-      height: 70vh;
+      height: 100vh;
     }
   }
   .container {
