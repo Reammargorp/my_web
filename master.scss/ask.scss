@@ -326,7 +326,7 @@ input[type="range"]::-moz-slider-thumb {
       width: 50px;
       cursor: pointer;
       z-index: 10;
-
+      margin-top: 15px;
       @include circle;
       @include breakpoints(mobile) {
         // width: 25%;
