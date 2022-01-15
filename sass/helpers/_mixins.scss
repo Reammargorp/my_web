@@ -1,0 +1,132 @@
+@use "../variables/color";
+
+@mixin list-reset {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+@mixin iconColor {
+  background-color: #563e7c;
+  background-image: linear-gradient(left, #563e7c, #bd1b6e);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorStr='#563e7c', endColorStr='#bd1b6e', gradientType='1');
+  background-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
+  font-family: "Font Awesome 5 Free";
+}
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin btnNone {
+  background-color: transparent;
+  border: none;
+  outline: none;
+}
+@mixin none {
+  border: none;
+  outline: none;
+}
+// logo mixin
+@mixin logo {
+  font-size: $font-size;
+  font-weight: bolder;
+}
+// $dimensions like prameters to use and put your value
+@mixin circle {
+  border-radius: 50%;
+}
+//grid//
+@mixin gridOne {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+  gap: 50px;
+}
+@mixin gridTwo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(500px, 1fr));
+  gap: 50px;
+}
+@mixin gridThree {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 50px;
+}
+@mixin gridFour {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 50px;
+}
+@mixin gridSo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(1000px, 1fr));
+  gap: 50px;
+}
+//row
+@mixin row {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+}
+//row
+//column
+@mixin column {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: 40px;
+}
+//column
+// flex centering mixin
+@mixin centering {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+// flex spaceing mixin
+@mixin spacing {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+//----------------------
+@mixin overlay($color, $opacity) {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color, $opacity);
+}
+
+//--------------------
+@mixin breakpoints($point) {
+  @if $point == mobile {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $point == mobileUp {
+    @media (min-width: 767px) {
+      @content;
+    }
+  } @else if $point == small {
+    @media (max-width: 991px) {
+      @content;
+    }
+  } @else if $point == medium {
+    @media (max-width: 1199px) {
+      @content;
+    }
+  } @else if $point == large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else if $point == mediumOn {
+    @media (max-width: 1199px) and (min-width: 767px) {
+      @content;
+    }
+  }
+}
