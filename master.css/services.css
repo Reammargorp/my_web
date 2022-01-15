@@ -850,6 +850,11 @@ input[type=range]::-moz-slider-thumb {
 .result .container {
   padding-top: 100px;
 }
+@media (max-width: 767px) {
+  .result .container {
+    margin-top: -110px;
+  }
+}
 .result .container .main-box {
   gap: 50px;
   display: -webkit-box;
@@ -992,6 +997,13 @@ input[type=range]::-moz-slider-thumb {
           transform: translate(-50%, -220%);
   color: white;
   margin: auto;
+}
+@media (max-width: 767px) {
+  .result .container .main-box .result-box .services-box .ser-box a {
+    font-size: 28px;
+    -webkit-transform: translate(-50%, -250%);
+            transform: translate(-50%, -250%);
+  }
 }
 @media (max-width: 767px) {
   .result .container .main-box .result-box .services-box .ser-box a {

@@ -664,6 +664,9 @@ input[type="range"]::-moz-slider-thumb {
   }
   .container {
     padding-top: $padding-bottom;
+    @include breakpoints(mobile) {
+      margin-top: -110px;
+    }
     width: 80%;
     .main-box {
       gap: 50px;

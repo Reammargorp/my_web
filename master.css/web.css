@@ -850,6 +850,11 @@ input[type=range]::-moz-slider-thumb {
   padding-top: 100px;
   width: 80%;
 }
+@media (max-width: 767px) {
+  .result .container {
+    margin-top: -110px;
+  }
+}
 .result .container .main-box {
   gap: 50px;
   display: -webkit-box;

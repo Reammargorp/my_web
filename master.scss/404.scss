@@ -174,7 +174,6 @@ input[type="range"]::-moz-slider-thumb {
     color: white;
     font-size: $font-size;
     // font-family: "Cairo";
-
     @include center;
   }
   .other {
@@ -661,6 +660,9 @@ input[type="range"]::-moz-slider-thumb {
   height: 100vh;
   .container {
     padding-top: $padding-bottom;
+    @include breakpoints(mobile) {
+      margin-top: -110px;
+    }
     width: 80%;
     .main-box {
       gap: 50px;
@@ -682,7 +684,7 @@ input[type="range"]::-moz-slider-thumb {
           font-weight: normal;
           margin-bottom: 15px;
           @include breakpoints(mobile) {
-            font-size: calculate($font-size, 15px);
+            font-size: calculate($font-size, 12px);
 
             width: 100%;
           }
