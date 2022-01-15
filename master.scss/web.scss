@@ -739,6 +739,7 @@ input[type="range"]::-moz-slider-thumb {
         }
       }
       .communication-box {
+        direction: ltr;
         width: 40%;
         @include breakpoints(mobile) {
           width: 100%;
@@ -777,6 +778,7 @@ input[type="range"]::-moz-slider-thumb {
             font-weight: 300;
             font-size: $font-size;
             // font-family: ;
+            direction: rtl;
           }
           .info-box {
             display: flex;
@@ -874,22 +876,30 @@ input[type="range"]::-moz-slider-thumb {
 /* start footer */
 .footer {
   position: relative;
-  z-index: 100;
   background-color: #191919;
   padding: 70px 0 0;
   @include breakpoints(mobile) {
     text-align: center;
   }
+
   .container {
     .main-box {
+      z-index: 200;
+
       @include gridThree;
       .box-main {
+        z-index: 200;
+
         .text {
+          z-index: 100;
+
           line-height: 2;
           color: #b9b9b9;
         }
 
         h3 {
+          z-index: 100;
+
           color: white;
           font-size: 50px;
           margin: 0 0 20px;
@@ -898,15 +908,20 @@ input[type="range"]::-moz-slider-thumb {
         .social {
           display: flex;
           padding-bottom: 10px;
+          z-index: 100;
+
           @include breakpoints(mobile) {
             justify-content: center;
           }
           li {
             margin-right: 10px;
+            z-index: 100;
           }
           a {
             background-color: #313131;
             color: #898989;
+            z-index: 100;
+
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -962,6 +977,8 @@ input[type="range"]::-moz-slider-thumb {
         }
       }
       .box-info {
+        z-index: 1000;
+
         .line {
           display: flex;
           align-items: center;

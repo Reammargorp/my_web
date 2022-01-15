@@ -804,25 +804,89 @@ input[type="range"]::-moz-slider-thumb {
   }
 }
 /*Start Result*/
+.call {
+  position: relative;
+  // height: 40vh;
+  padding: 30px 0;
+  .container {
+    padding-bottom: 50px;
+    .call-box {
+      display: flex;
+      flex-direction: row-reverse;
+      background-color: #2b0667;
+      width: 100%;
+      // height: fit-content;
+      padding: 30px;
+      gap: 50px;
+      justify-content: space-between;
+
+      border-radius: 10px;
+      flex-wrap: wrap;
+      h2 {
+        direction: rtl;
+        color: white;
+        @include centering;
+        gap: 5px;
+        display: flex;
+        flex-wrap: wrap;
+        @include breakpoints(mobile) {
+          gap: 40px;
+          justify-content: flex-start;
+        }
+        p {
+          color: #c3c3c4;
+          font-weight: normal;
+          @include centering;
+          font-size: $font-size-small;
+        }
+      }
+      a {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        color: white;
+        background-color: $color;
+        border-radius: 30px;
+        padding: 20px;
+        font-size: $font-size-small;
+        gap: 5px;
+        direction: rtl;
+
+        transition: $transition;
+        &:hover {
+          background-color: $color-alt;
+        }
+      }
+    }
+  }
+}
 /* start footer */
 .footer {
   position: relative;
-  z-index: 100;
   background-color: #191919;
   padding: 70px 0 0;
   @include breakpoints(mobile) {
     text-align: center;
   }
+
   .container {
     .main-box {
+      z-index: 200;
+
       @include gridThree;
       .box-main {
+        z-index: 200;
+
         .text {
+          z-index: 100;
+
           line-height: 2;
           color: #b9b9b9;
         }
 
         h3 {
+          z-index: 100;
+
           color: white;
           font-size: 50px;
           margin: 0 0 20px;
@@ -831,15 +895,20 @@ input[type="range"]::-moz-slider-thumb {
         .social {
           display: flex;
           padding-bottom: 10px;
+          z-index: 100;
+
           @include breakpoints(mobile) {
             justify-content: center;
           }
           li {
             margin-right: 10px;
+            z-index: 100;
           }
           a {
             background-color: #313131;
             color: #898989;
+            z-index: 100;
+
             display: inline-flex;
             justify-content: center;
             align-items: center;
@@ -895,6 +964,8 @@ input[type="range"]::-moz-slider-thumb {
         }
       }
       .box-info {
+        z-index: 1000;
+
         .line {
           display: flex;
           align-items: center;
