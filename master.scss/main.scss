@@ -677,7 +677,7 @@ input[type="range"]::-moz-slider-thumb {
   .container {
     margin-top: 5%;
     @include breakpoints(mobile) {
-      margin-top: -8%;
+      margin-top: -15%;
     }
     // @include gridsmall;
     display: flex;
@@ -693,7 +693,7 @@ input[type="range"]::-moz-slider-thumb {
       transition: 1s;
       .One {
         font-size: calculate($font-size-large, 20px);
-        font-weight: bolder;
+        font-weight: bold;
         line-height: 1.5;
         transition: 1s;
         transform: translatey(-210%);
@@ -720,7 +720,7 @@ input[type="range"]::-moz-slider-thumb {
           opacity: 1;
           transform: translatey(0%);
           @include breakpoints(mobile) {
-            transform: translatey(-10%);
+            transform: translatey(-50%);
           }
         }
         @include breakpoints(small) {
@@ -741,7 +741,7 @@ input[type="range"]::-moz-slider-thumb {
       }
       .Two {
         @include breakpoints(mobile) {
-          margin-top: -5%;
+          margin-top: -11%;
         }
       }
       p {
@@ -788,6 +788,9 @@ input[type="range"]::-moz-slider-thumb {
         transition: 2s;
         // right: -120%;
         // overflow: hidden;
+        @include breakpoints(mobile) {
+          margin-top: 50px;
+        }
         z-index: 10;
         @include breakpoints(mobileUp) {
           position: absolute;
@@ -1167,7 +1170,7 @@ $special: ".special";
   }
   margin-top: 10%;
   @include breakpoints(mobile) {
-    margin-top: -10%;
+    margin-top: -15%;
   }
   transition: $transition-so-slow;
 
