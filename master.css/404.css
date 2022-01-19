@@ -880,7 +880,7 @@ input[type=range]::-moz-slider-thumb {
 .result {
   position: relative;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
 .result .container {
   padding-top: 100px;
