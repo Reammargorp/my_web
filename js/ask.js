@@ -27,6 +27,7 @@ showcaseBtn.onclick = function() {
         showcaseBtn.classList.remove("fas", "fa-bars")
         showcaseBtn.classList.add("fas", "fa-times")
         showcase.classList.toggle("active")
+                document.body.style.overflowY = "hidden"
 //      showcase.style.marginRight = "-300px"//     document.body.style.paddingRight = "300px"
         // links.style.left = "-100%"
     }else {  
@@ -44,9 +45,11 @@ showcaseBtn.onclick = function() {
 let cursorX = document.querySelector(".showcase .overlay")
 
 cursorX.onclick = function() {
-    showcase.classList.toggle("active")
-    showcaseBtn.classList.remove("fas", "fa-times")
-    showcaseBtn.classList.add("fas", "fa-bars")
+  showcase.classList.toggle("active")
+  showcaseBtn.classList.remove("fas", "fa-times")
+  showcaseBtn.classList.add("fas", "fa-bars")
+  document.body.style.overflowY = "visible"
+
 }
 //
 let closeBtn = document.querySelector(".close-btn button")
@@ -54,6 +57,8 @@ closeBtn.onclick = function() {
   showcase.classList.toggle("active")
   showcaseBtn.classList.remove("fas", "fa-times")
   showcaseBtn.classList.add("fas", "fa-bars")
+  document.body.style.overflowY = "visible"
+
 }
 
     /////
@@ -164,15 +169,17 @@ closeBtn.onclick = function() {
       let search =document.querySelector(".search")
       let searchClose = document.querySelector(".search-close-btn button")
     //   let search =document.querySelector(".search-bar .text")
+    searchClose.onclick =function() {
+      mainSearch.classList.toggle("active")
+      searchText.classList.toggle("active")
+      document.body.style.overflowY = "visible"
 
-      searchClose.onclick =function() {
-          mainSearch.classList.toggle("active")
-          searchText.classList.toggle("active")
+}
+search.onclick = function() {
+      mainSearch.classList.toggle("active") 
+        searchText.classList.toggle("active")
+        document.body.style.overflowY = "hidden"
     }
-    search.onclick = function() {
-          mainSearch.classList.toggle("active") 
-            searchText.classList.toggle("active")
-      }
 
       //
       let socialIcon = document.querySelector(".contact-us .social")

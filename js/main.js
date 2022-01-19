@@ -28,6 +28,7 @@ showcaseBtn.onclick = function() {
         showcaseBtn.classList.remove("fas", "fa-bars")
         showcaseBtn.classList.add("fas", "fa-times")
         showcase.classList.toggle("active")
+        document.body.style.overflowY = "hidden"
 //      showcase.style.marginRight = "-300px"//     document.body.style.paddingRight = "300px"
         // links.style.left = "-100%"
     }else {  
@@ -115,6 +116,8 @@ cursorX.onclick = function() {
     showcase.classList.toggle("active")
     showcaseBtn.classList.remove("fas", "fa-times")
     showcaseBtn.classList.add("fas", "fa-bars")
+    document.body.style.overflowY = "visible"
+
 }
 //
 let closeBtn = document.querySelector(".close-btn button")
@@ -122,6 +125,8 @@ closeBtn.onclick = function() {
     showcase.classList.toggle("active")
     showcaseBtn.classList.remove("fas", "fa-times")
     showcaseBtn.classList.add("fas", "fa-bars")
+    document.body.style.overflowY = "visible"
+
 }
 
 //
@@ -284,11 +289,14 @@ console.log(search)
       searchClose.onclick =function() {
           mainSearch.classList.toggle("active")
           searchText.classList.toggle("active")
+          document.body.style.overflowY = "visible"
+
     }
     search.onclick = function() {
           mainSearch.classList.toggle("active") 
             searchText.classList.toggle("active")
-      }
+            document.body.style.overflowY = "hidden"
+        }
 
       //
       let socialIcon = document.querySelector(".contact-us .social")
