@@ -530,7 +530,7 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .header .showcase .show-services-box {
-    margin-top: 50px;
+    margin-top: 110px;
   }
 }
 .header .showcase .show-services-box > li {
