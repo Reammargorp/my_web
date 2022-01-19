@@ -205,7 +205,6 @@ input[type=range]::-moz-slider-thumb {
   .header > h2 {
     -ms-flex-wrap: nowrap;
         flex-wrap: nowrap;
-    width: 60%;
   }
 }
 .header .other {
