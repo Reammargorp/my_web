@@ -178,7 +178,6 @@ input[type="range"]::-moz-slider-thumb {
     @include center;
     @include breakpoints(mobile) {
       flex-wrap: nowrap;
-      // width: 60%;
     }
   }
   .other {
