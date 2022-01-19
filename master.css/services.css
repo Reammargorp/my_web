@@ -452,6 +452,11 @@ input[type=range]::-moz-slider-thumb {
   cursor: pointer;
   padding: 5px 0 0 0;
 }
+@media (max-width: 767px) {
+  .header .showcase .show-search-bar .showCase-submit {
+    padding: 15px 0 0 0;
+  }
+}
 .header .showcase .overlay {
   position: absolute;
   left: 0;

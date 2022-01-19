@@ -375,6 +375,9 @@ input[type="range"]::-moz-slider-thumb {
       .showCase-submit {
         color: black;
         transform: translateX(25px);
+        @include breakpoints(mobile) {
+          padding: 15px 0 0 0;
+        }
         cursor: pointer;
         padding: 5px 0 0 0;
       }

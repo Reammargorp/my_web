@@ -357,6 +357,9 @@ input[type="range"]::-moz-slider-thumb {
         transform: translateX(25px);
         cursor: pointer;
         padding: 5px 0 0 0;
+        @include breakpoints(mobile) {
+          padding:15px 0 0 0;
+        }
       }
     }
     .overlay {
