@@ -3,18 +3,19 @@ let showServicesBox = document.querySelector(".show-services-box")
 let showServices = document.querySelector(".show-services")
 console.log(showBtn)
 showBtn.onclick = function() {
-    if(showBtn.classList.value === "fas fa-chevron-right") {
-        showBtn.classList.remove("fas", "fa-chevron-right")
-        showBtn.classList.add("fas", "fa-chevron-down")
-        showServicesBox.style.display = "block"
-        showServices.style.marginBottom = "30%"
+  if(showBtn.classList.value === "fas fa-chevron-right") {
+      showBtn.classList.remove("fas", "fa-chevron-right")
+      showBtn.classList.add("fas", "fa-chevron-down")
+      showServicesBox.classList.toggle("active")
+      showServices.style.marginBottom = "55px"
 
-    }else {
-        showBtn.classList.remove("fas", "fa-chevron-down")
-        showBtn.classList.add("fas", "fa-chevron-right")
-        showServices.style.marginBottom = "0%"
-        showServicesBox.style.display = "none"
-    }
+  }else {
+      showBtn.classList.remove("fas", "fa-chevron-down")
+      showBtn.classList.add("fas", "fa-chevron-right")
+      showServicesBox.classList.toggle("active")
+      showServices.style.marginBottom = "0px"
+
+  }
 }
 //
 let showcase = document.querySelector(".showcase")
