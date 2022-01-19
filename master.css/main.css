@@ -524,6 +524,7 @@ input[type=range]::-moz-slider-thumb {
   display: none;
   position: absolute;
   right: 0;
+  right: 0;
   margin-top: 50%;
   width: 100%;
 }
