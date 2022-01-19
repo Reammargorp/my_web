@@ -465,7 +465,7 @@ input[type="range"]::-moz-slider-thumb {
   .contact-us {
     position: fixed;
     z-index: 10;
-    right: 20px;
+    right: 10px;
     bottom: 30px;
     .container {
       display: flex;
@@ -489,10 +489,12 @@ input[type="range"]::-moz-slider-thumb {
             @include centering;
             padding: 12px;
             @include centering;
-
             color: white;
             font-size: calculate($font-size, 2px);
             cursor: pointer;
+            @include breakpoints(mobile) {
+              font-size: $font-size;
+            }
           }
         }
         .messenger {
@@ -504,6 +506,9 @@ input[type="range"]::-moz-slider-thumb {
             font-size: calculate($font-size, 2px);
             color: white;
             cursor: pointer;
+            @include breakpoints(mobile) {
+              font-size: $font-size;
+            }
           }
         }
       }
@@ -513,10 +518,15 @@ input[type="range"]::-moz-slider-thumb {
           min-width: 56px;
           cursor: pointer;
           padding: 12px;
+          // width: 30px;
+          // height: 30px;
           @include circle;
           @include centering;
           background-color: #4f6aca;
           font-size: calculate($font-size, 2px);
+          @include breakpoints(mobile) {
+            font-size: $font-size;
+          }
         }
       }
     }
@@ -660,13 +670,15 @@ input[type="range"]::-moz-slider-thumb {
       right: 0;
     }
   }
-
   .overlay {
     @include overlay(black, 0.5);
     z-index: -1;
   }
   .container {
     margin-top: 5%;
+    @include breakpoints(mobile) {
+      margin-top: -8%;
+    }
     // @include gridsmall;
     display: flex;
 
@@ -693,7 +705,7 @@ input[type="range"]::-moz-slider-thumb {
           font-size: calculate($font-size, 20px);
         }
         @include breakpoints(mobile) {
-          font-size: calculate($font-size-small, 15px);
+          font-size: calculate($font-size-small, 13px);
         }
       }
       .Two {
@@ -707,6 +719,9 @@ input[type="range"]::-moz-slider-thumb {
         &.active {
           opacity: 1;
           transform: translatey(0%);
+          @include breakpoints(mobile) {
+            transform: translatey(-10%);
+          }
         }
         @include breakpoints(small) {
           font-size: calculate($font-size, 20px);
@@ -1147,9 +1162,12 @@ $special: ".special";
 .works {
   position: relative;
   padding: calculate($padding-bottom, 15px) 0 20px 0;
+  @include breakpoints(mobile) {
+    padding: 00px 0 20px 0;
+  }
   margin-top: 10%;
   @include breakpoints(mobile) {
-    margin-top: -78%;
+    margin-top: -10%;
   }
   transition: $transition-so-slow;
 

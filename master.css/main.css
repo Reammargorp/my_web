@@ -553,7 +553,7 @@ input[type=range]::-moz-slider-thumb {
 .landing .contact-us {
   position: fixed;
   z-index: 10;
-  right: 20px;
+  right: 10px;
   bottom: 30px;
 }
 .landing .contact-us .container {
@@ -605,6 +605,11 @@ input[type=range]::-moz-slider-thumb {
   font-size: 32px;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .landing .contact-us .container .social .whatsapp i {
+    font-size: 30px;
+  }
+}
 .landing .contact-us .container .social .messenger i {
   background-color: #1877f2;
   border-radius: 50%;
@@ -621,6 +626,11 @@ input[type=range]::-moz-slider-thumb {
   font-size: 32px;
   color: white;
   cursor: pointer;
+}
+@media (max-width: 767px) {
+  .landing .contact-us .container .social .messenger i {
+    font-size: 30px;
+  }
 }
 .landing .contact-us .container .contact-icon {
   cursor: pointer;
@@ -641,6 +651,11 @@ input[type=range]::-moz-slider-thumb {
           align-items: center;
   background-color: #4f6aca;
   font-size: 32px;
+}
+@media (max-width: 767px) {
+  .landing .contact-us .container .contact-icon i {
+    font-size: 30px;
+  }
 }
 .landing .btn-up {
   position: fixed;
@@ -858,6 +873,11 @@ input[type=range]::-moz-slider-thumb {
           flex-direction: column;
   color: white;
 }
+@media (max-width: 767px) {
+  .landing .container {
+    margin-top: -8%;
+  }
+}
 .landing .container .title-box {
   text-align: end;
   margin-top: 30px;
@@ -885,7 +905,7 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .landing .container .title-box .One {
-    font-size: 33px;
+    font-size: 31px;
   }
 }
 .landing .container .title-box .Two {
@@ -903,6 +923,12 @@ input[type=range]::-moz-slider-thumb {
   opacity: 1;
   -webkit-transform: translatey(0%);
           transform: translatey(0%);
+}
+@media (max-width: 767px) {
+  .landing .container .title-box .Two.active {
+    -webkit-transform: translatey(-10%);
+            transform: translatey(-10%);
+  }
 }
 @media (max-width: 991px) {
   .landing .container .title-box .Two {
@@ -1463,7 +1489,12 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .works {
-    margin-top: -78%;
+    padding: 0px 0 20px 0;
+  }
+}
+@media (max-width: 767px) {
+  .works {
+    margin-top: -10%;
   }
 }
 @media (max-width: 767px) {
