@@ -475,20 +475,25 @@ input[type="range"]::-moz-slider-thumb {
         transition: $transition-slow;
         opacity: 0;
         gap: 20px;
-        z-index: -10;
+        z-index: -100;
+        @include breakpoints(mobile) {
+          position: absolute;
+          right: -100%;
+          bottom: 180%;
+        }
         &.active {
           display: flex;
+          right: 0%;
           z-index: 10;
           opacity: 1;
+          margin-right: 20%;
         }
-
         .whatsapp {
           i {
             background-color: #49e670;
             @include circle;
             @include centering;
             padding: 12px;
-            @include centering;
             color: white;
             font-size: calculate($font-size, 2px);
             cursor: pointer;
@@ -1170,7 +1175,7 @@ $special: ".special";
   }
   margin-top: 10%;
   @include breakpoints(mobile) {
-    margin-top: -15%;
+    margin-top: -10%;
   }
   transition: $transition-so-slow;
 

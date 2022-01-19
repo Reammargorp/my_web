@@ -576,14 +576,23 @@ input[type=range]::-moz-slider-thumb {
   transition: 0.5s;
   opacity: 0;
   gap: 20px;
-  z-index: -10;
+  z-index: -100;
+}
+@media (max-width: 767px) {
+  .landing .contact-us .container .social {
+    position: absolute;
+    right: -100%;
+    bottom: 180%;
+  }
 }
 .landing .contact-us .container .social.active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  right: 0%;
   z-index: 10;
   opacity: 1;
+  margin-right: 20%;
 }
 .landing .contact-us .container .social .whatsapp i {
   background-color: #49e670;
@@ -598,9 +607,6 @@ input[type=range]::-moz-slider-thumb {
       -ms-flex-align: center;
           align-items: center;
   padding: 12px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   color: white;
   font-size: 32px;
   cursor: pointer;
@@ -1499,7 +1505,7 @@ input[type=range]::-moz-slider-thumb {
 }
 @media (max-width: 767px) {
   .works {
-    margin-top: -15%;
+    margin-top: -10%;
   }
 }
 @media (max-width: 767px) {
