@@ -754,6 +754,11 @@ input[type="range"]::-moz-slider-thumb {
               @include circle;
               width: 15px;
               height: 15px;
+              @include breakpoints(mobile) {
+                width: 12px;
+                height: 12px;
+                padding: 12px;
+              }
               padding: 15px;
               margin-left: -1.5%;
               // display: none;
@@ -868,6 +873,11 @@ input[type="range"]::-moz-slider-thumb {
               margin-left: -1.5%;
               // display: none;
               justify-content: center;
+              @include breakpoints(mobile) {
+                width: 12px;
+                height: 12px;
+                padding: 12px;
+              }
               align-items: center;
               display: flex;
               opacity: 1;

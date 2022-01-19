@@ -52,11 +52,11 @@ cursorX.onclick = function() {
 let closeBtn = document.querySelector(".close-btn button")
 closeBtn.onclick = function() {
     showcase.classList.toggle("active")
-    showcaseBtn.classList.remove("fas", "fa-ban")
+    showcaseBtn.classList.remove("fas", "fa-times")
     showcaseBtn.classList.add("fas", "fa-bars")
-}
+  }
+  
 
-    /////
     //
    //
    let showSearchText = document.querySelector(".show-search-bar [type='text']");

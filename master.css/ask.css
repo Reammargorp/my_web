@@ -992,6 +992,13 @@ input[type=range]::-moz-slider-thumb {
   transition: 0.5s;
   z-index: 5;
 }
+@media (max-width: 767px) {
+  .result .container .main-box .result-box .boxOne .box .close {
+    width: 12px;
+    height: 12px;
+    padding: 12px;
+  }
+}
 .result .container .main-box .result-box .boxOne .box .open {
   position: absolute;
   opacity: 0;
@@ -1127,6 +1134,13 @@ input[type=range]::-moz-slider-thumb {
   -webkit-transition: 0.5s;
   transition: 0.5s;
   z-index: 5;
+}
+@media (max-width: 767px) {
+  .result .container .main-box .result-box .boxTwo .box .close {
+    width: 12px;
+    height: 12px;
+    padding: 12px;
+  }
 }
 .result .container .main-box .result-box .boxTwo .box .open {
   position: absolute;
