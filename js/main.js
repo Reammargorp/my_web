@@ -140,11 +140,7 @@ let skillsBox = document.querySelector(".skills-box")
 let progSpan = document.querySelectorAll(".the-progress span")
 let works = document.querySelector(".works")
 let nums =document.querySelectorAll(".num")
-
 let started = false;
-console.log(nums)
-
-  
   function startCount(el) {
     let goal = el.dataset.goal;
     let count = setInterval(() => {
