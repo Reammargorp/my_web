@@ -144,10 +144,6 @@ let nums =document.querySelectorAll(".num")
 let started = false;
 console.log(nums)
 
-
-window.onscroll = () => {
-
-};
   
   function startCount(el) {
     let goal = el.dataset.goal;
