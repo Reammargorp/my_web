@@ -517,7 +517,9 @@ input[type="range"]::-moz-slider-thumb {
           right: 0%;
           z-index: 10;
           opacity: 1;
-          margin-right: 20%;
+          @include breakpoints(mobile) {
+            margin-right: 20%;
+          }
         }
         .whatsapp {
           i {
@@ -748,7 +750,7 @@ input[type="range"]::-moz-slider-thumb {
         position: absolute;
         top: 22%;
         font-size: calculate($font-size-large, 20px);
-        font-weight: bolder;
+        font-weight: bold;
         line-height: 1.5;
         transition: 1s;
         transform: translatey(-350%);
@@ -763,7 +765,7 @@ input[type="range"]::-moz-slider-thumb {
           font-size: calculate($font-size, 20px);
         }
         @include breakpoints(mobile) {
-          font-size: calculate($font-size-small, 15px);
+          font-size: calculate($font-size-small, 13px);
         }
       }
     }
@@ -894,7 +896,7 @@ $special: ".special";
     opacity: 1;
   }
   .special-heading {
-    padding-top: calculate($padding-bottom);
+    padding: 50px 0;
   }
   .container {
     padding: calculate-($padding-bottom, 50px) 0;
@@ -907,7 +909,7 @@ $special: ".special";
         // @include breakpoints(mobile) {
         //   opacity: 0;
         //   left: 0;
-        //   transition-delay: 0.5s;
+        //   // transition-delay: 0.5s;
         // }
         @include breakpoints(mediumOn) {
           position: relative;
@@ -1188,7 +1190,7 @@ $special: ".special";
             transition: 2s;
             width: 0%;
             @include breakpoints(mobile) {
-              transition-delay: 1.2s;
+              // transition-delay: 1.2s;
             }
           }
         }
@@ -1223,7 +1225,7 @@ $special: ".special";
       .website {
         transition: $transition-so-slow;
         @include breakpoints(mobile) {
-          transition-delay: 1.2s;
+          // transition-delay: 1.2s;
         }
         position: relative;
         right: -250%;
@@ -1263,7 +1265,7 @@ $special: ".special";
       }
       .hands {
         @include breakpoints(mobile) {
-          transition-delay: 1.2s;
+          // transition-delay: 1.2s;
         }
         transition: $transition-so-slow;
         position: relative;
@@ -1305,7 +1307,7 @@ $special: ".special";
       }
       .expert {
         @include breakpoints(mobile) {
-          transition-delay: 1.2s;
+          // transition-delay: 1.2s;
         }
         transition: $transition-so-slow;
         position: relative;
@@ -1347,7 +1349,7 @@ $special: ".special";
       }
       .designer {
         @include breakpoints(mobile) {
-          transition-delay: 1.2s;
+          // transition-delay: 1.2s;
         }
         transition: $transition-so-slow;
         position: relative;
@@ -1412,7 +1414,7 @@ $special: ".special";
 
   opacity: 0;
   @include breakpoints(mobile) {
-    transition-delay: 1.2s;
+    // transition-delay: 1.2s;
   }
   &.active {
     opacity: 1;
@@ -1640,10 +1642,10 @@ $special: ".special";
 .info {
   overflow: hidden;
   @include breakpoints(mobile) {
-    transition-delay: 3.7s;
+    // transition-delay: 3.7s;
   }
   @include breakpoints(mediumOn) {
-    transition-delay: 1.5s;
+    // transition-delay: 1.5s;
   }
   transition: $transition-so-slow;
   position: relative;
@@ -1728,10 +1730,10 @@ $special: ".special";
 .footer {
   position: relative;
   @include breakpoints(mobile) {
-    transition-delay: 4s;
+    // transition-delay: 4s;
   }
   @include breakpoints(mediumOn) {
-    transition-delay: 1.5s;
+    // transition-delay: 1.5s;
   }
   right: -100%;
   @include breakpoints(mobile) {

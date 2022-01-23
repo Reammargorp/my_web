@@ -7,7 +7,7 @@ showBtn.onclick = function() {
         showBtn.classList.remove("fas", "fa-chevron-right")
         showBtn.classList.add("fas", "fa-chevron-down")
         showServicesBox.classList.toggle("active")
-        showServices.style.marginBottom = "55px"
+        showServices.style.marginBottom = "60px"
 
     }else {
         showBtn.classList.remove("fas", "fa-chevron-down")
@@ -139,15 +139,35 @@ let whoMe = document.querySelector(".whoMe")
 let skillsBox = document.querySelector(".skills-box")
 let progSpan = document.querySelectorAll(".the-progress span")
 let works = document.querySelector(".works")
-console.log(works)
+let nums =document.querySelectorAll(".num")
+
+let started = false;
+console.log(nums)
+
+
+window.onscroll = () => {
+
+};
+  
+  function startCount(el) {
+    let goal = el.dataset.goal;
+    let count = setInterval(() => {
+      el.textContent++;
+      if (el.textContent == goal) {
+        clearInterval(count);
+      }
+    }, 1500 / goal);
+  }
+
+//   startCount(document.querySelectorAll(".num")[0]);
+
+
 mySkBtn.onclick = function() {
     mySkBorder.classList.add("active")
     whoBorder.classList.remove("active")
     skillsBox.classList.add("active")
     whoMe.classList.remove("active")
     // for(let i = 0 ; i < 4 ; i++) {
-
-        
 }
 whoBtn.onclick = function() {
     mySkBorder.classList.remove("active")
@@ -339,7 +359,8 @@ console.log(contactIconI)
         let workWebSec = document.querySelector(".works .main-box .website")
         let workExpertSec = document.querySelector(".works .main-box .expert")
         let reviewBox = document.querySelector(".review")
-
+        let reviewSec = document.querySelector(".review")
+        let skillSec = document.querySelector(".skill")
         let footer =document.querySelector(".footer")
         console.log()
         window.onscroll = function(){
@@ -351,33 +372,38 @@ console.log(contactIconI)
               btnUp.style.opacity = "0"
               mainBtnUp.style.zINdex = "-100"
             }
-            if(window.scrollY >= 300) {
+            if(window.scrollY >= specialSec.offsetTop -400) {
                 specialSec.classList.add("active")
                 cloudBox.classList.add("active")
                 mobileBox.classList.add("active")
                 moneyBox.classList.add("active")
               }
-              if(window.scrollY >= 1000) {
+              if(window.scrollY >= skillSec.offsetTop -300) {
                 progSpan[0].style.width = "90%"
                 progSpan[1].style.width = "85%"
                 progSpan[2].style.width = "76%"
                 skillsBox.classList.add("toggle")
               }
 
-            if(window.scrollY >= 1500) {
+            if(window.scrollY >= works.offsetTop -300) {
                 workHandSec.classList.add("active")
                 workDesignSec.classList.add("active")
                 workWebSec.classList.add("active")
                 workExpertSec.classList.add("active")
-        }
-            if(window.scrollY >= 2000) {
+                    if (!started) {
+                        nums.forEach((num) => startCount(num))
+                    }
+                    started = true
+                }
+        
+            if(window.scrollY >= reviewSec.offsetTop - 300) {
                     reviewBox.classList.add("active")
         }
-            if(window.scrollY >= 2300) {
+            if(window.scrollY >= info.offsetTop - 300) {
                     info.classList.add("active")
         }
         
-            if(window.scrollY >= 2600) {
+            if(window.scrollY >= footer.offsetTop - 500) {
                     footer.classList.add("active")
         }
         
